@@ -8,6 +8,6 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
-[bitodoo_stock_location](bitodoo_stock_location/) | 10.0.2.0.0 | Agrega campos de ubicación en el usuario (res.users).
+[bitodoo_stock_assign_location_user](bitodoo_stock_assign_location_user/) | 10.0.2.0.0 | Asigna una o muchas ubicaciones a usuario.
 
 [//]: # (end addons)
