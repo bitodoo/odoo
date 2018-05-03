@@ -28,8 +28,6 @@
     'website': 'http://www.bitodoo.com/',
     'author': 'Bitodoo',
     'depends': ['bitodoo_stock_assign_location_user'],
-    'data': [
-        'views/stock.xml',
-    ],
+    'data': [],
     'application': True,
 }
