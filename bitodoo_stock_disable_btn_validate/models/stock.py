@@ -3,7 +3,7 @@
 from odoo import fields, models, api
 
 
-class ResUsers(models.Model):
+class StockPicking(models.Model):
     _inherit = 'stock.picking'
 
     can_validate = fields.Boolean(
