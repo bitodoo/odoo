@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <menuitem action="stock_account.action_wizard_stock_valuation_history" groups="stock.group_stock_manager" id="stock_account.menu_action_wizard_valuation_history" parent="stock.menu_warehouse_report" sequence="1"/>
+    </data>
+</odoo>
