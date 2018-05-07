@@ -30,6 +30,7 @@
     'depends': ['stock'],
     'data': [
         'views/form.xml',
+        'views/search.xml',
     ],
     'application': True,
 }

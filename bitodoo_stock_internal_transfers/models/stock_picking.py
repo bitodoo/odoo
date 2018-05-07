@@ -33,12 +33,18 @@ class StockPicking(models.Model):
     )
 
     def action_assign(self):
+        user_location_ids = ([x.id for x in self.env.user.location_ids if x])
+        if not (self.location_id.id in user_location_ids):
+            raise Warning(u"No tiene permisos para transferir desde 'Ubicación origen' {} ".format(self.location_id.name))
         for line in self.move_lines:
             product_name = line.product_id.display_name
             if not line.product_id.type == 'product':
                 raise Warning(u"El producto {} debe ser de tipo Almacenable.".format(product_name))
             if self.location_id.id:
-                obj_sq = self.env['stock.quant'].search([('location_id', '=', self.location_id.id),('product_id', '=', line.product_id.id)])
+                obj_sq = self.env['stock.quant'].search([
+                                                        ('location_id', '=', self.location_id.id),
+                                                        ('product_id', '=', line.product_id.id)
+                                                        ])
                 product_stock_qty = sum([x.qty for x in obj_sq if x.qty])
                 product_qty = line.product_uom_qty
                 name_warehouse = self.location_id.name
