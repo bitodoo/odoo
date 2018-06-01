@@ -14,7 +14,7 @@ class StockPicking(models.Model):
             msm = u"las ubicaciones de origén [{}] son diferentes a la ubicación de la transferencia ({})"
             raise Warning(msm.format(', '.join(location_origin_names), self.location_id.name))
         if location_dest_names:
-            msm = u"las ubicaciones [{}] son diferentes a la ubicación de la transferencia ({})"
+            msm = u"las ubicaciones de destino [{}] son diferentes a la ubicación de la transferencia ({})"
             raise Warning(msm.format(', '.join(location_dest_names), self.location_dest_id.name))
         res = super(StockPicking, self).action_assign()
         return res
