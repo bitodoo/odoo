@@ -14,7 +14,7 @@ class Currency(models.Model):
     rate_pe = fields.Float(
         compute='_compute_current_rate_pe',
         string='Cambio del día',
-        digits=(12, 4),
+        digits=(12, 3),
         help='Tipo de cambio del dia en formato peruano.'
     )
     type = fields.Selection(
@@ -31,14 +31,16 @@ class Currency(models.Model):
             create = obj_rcr_ids.create({
                 'currency_id': self.id,
                 'date': fields.Date.today(),
-                'rate_pe': pe_exchange_rate.exchange_rate_sale(self)
+                'rate_pe': pe_exchange_rate.exchange_rate_sale(self),
+                'rate': 1 / float(pe_exchange_rate.exchange_rate_sale(self))
             })
             return create
         if self.type == "purchase" and self.symbol.upper() == "$":
             create = obj_rcr_ids.create({
                 'currency_id': self.id,
                 'date': fields.Date.today(),
-                'rate_pe': pe_exchange_rate.exchange_rate_purchase(self)
+                'rate_pe': pe_exchange_rate.exchange_rate_purchase(self),
+                'rate': 1 / float(pe_exchange_rate.exchange_rate_sale(self))
             })
             return create
 
@@ -74,7 +76,7 @@ class CurrencyRate(models.Model):
 
     rate_pe = fields.Float(
         string='Cambio',
-        digits=(12, 4),
+        digits=(12, 3),
         help='Tipo de cambio en formato peruano. Ejm: 3.25 si $1 = S/. 3.25'
     )
     type = fields.Selection(related="currency_id.type", store=True)
