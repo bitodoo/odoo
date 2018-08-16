@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="bitodoo_developer_mode" inherit_id="web.webclient_bootstrap">
+            <xpath expr="//nav[@id='oe_main_menu_navbar']" position="before">
+                <t t-if="True" groups="developer_mode.odoo_developer_group">
+                    <div style="height:25px;text-align:center;background-color:#ee3425;color:#ffffff;">
+                        <span><b>Ambiente de desarrollo:</b> <t t-esc="request.session.db"/></span>
+                    </div>
+                </t>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>
