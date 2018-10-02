@@ -1,0 +1,14 @@
+#. module: hr_contract
+#: model:ir.model.fields,field_description:hr_contract.field_hr_contract_name
+msgid "Contract Reference"
+msgstr "Referencia Contrato / Resolución"
+
+#. module: hr_contract
+#: model:ir.model.fields,field_description:hr_contract.field_hr_contract_employee_id
+msgid "Employee"
+msgstr "Servidor"
+
+#. module: hr_contract
+#: model:ir.model.fields,field_description:hr_contract.field_hr_contract_department_id
+msgid "Departament"
+msgstr "Oficina"

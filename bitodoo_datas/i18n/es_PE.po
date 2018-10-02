@@ -1,0 +1,114 @@
+#. module: hr
+#: model:ir.ui.view,arch_db:hr.view_employee_form
+msgid "Personal Information"
+msgstr "Información Personal"
+
+#. module: hr
+#: model:ir.ui.view,arch_db:hr.view_employee_form
+msgid "Contact Information"
+msgstr "Información de Contacto"
+
+#. module: hr
+#: model:ir.model.fields,field_description:hr.field_hr_employee_address_id
+msgid "Working Address"
+msgstr "Ubicación Física"
+
+#. module: hr
+#: model:ir.model.fields,field_description:hr.field_hr_employee_work_phone
+msgid "Work Phone"
+msgstr "Teléfono Institucional"
+
+#. module: hr
+#: model:ir.model.fields,field_description:hr.field_hr_employee_mobile_phone
+msgid "Work Mobile"
+msgstr "Móvil Institucional"
+
+#. module: hr
+#: model:ir.model.fields,field_description:hr.field_hr_employee_work_email
+msgid "Work Email"
+msgstr "Correo Institucional"
+
+#. module: hr
+#: model:ir.ui.view,arch_db:hr.view_employee_form
+msgid "Citizenship & Other Information"
+msgstr "Identificación e Información Adicional"
+
+#. module: hr
+#: model:ir.model.fields,field_description:hr.field_hr_employee_country_id
+msgid "Nationality (Country)"
+msgstr "Nacionalidad"
+
+#. module: hr
+#: model:ir.model.fields,field_description:hr.field_hr_employee_identification_id
+msgid "Identification No"
+msgstr "Nº Documento"
+
+#. module: hr
+#: model:ir.actions.act_window,name:hr.act_employee_from_department
+#: model:ir.actions.act_window,name:hr.open_view_employee_list
+#: model:ir.actions.act_window,name:hr.open_view_employee_list_my
+#: model:ir.model.fields,field_description:hr.field_hr_employee_category_employee_ids
+#: model:ir.model.fields,field_description:hr.field_hr_job_employee_ids
+#: model:ir.ui.menu,name:hr.menu_hr_root
+#: model:ir.ui.menu,name:hr.menu_open_view_employee_list_my
+#: model:ir.ui.view,arch_db:hr.hr_department_view_kanban
+#: model:ir.ui.view,arch_db:hr.view_employee_filter
+#: model:ir.ui.view,arch_db:hr.view_employee_tree
+#: model:ir.ui.view,arch_db:hr.view_partner_tree2
+msgid "Employees"
+msgstr "Servidores"
+
+#. module: hr
+#: model:ir.model.fields,field_description:hr.field_hr_employee_department_id
+#: model:ir.model.fields,field_description:hr.field_hr_job_department_id
+#: model:ir.ui.view,arch_db:hr.view_department_filter
+#: model:ir.ui.view,arch_db:hr.view_employee_filter
+#: model:ir.ui.view,arch_db:hr.view_job_filter
+msgid "Department"
+msgstr "Estructura"
+
+#. module: hr
+#: model:ir.actions.act_window,name:hr.open_module_tree_department
+#: model:ir.ui.menu,name:hr.menu_hr_department_tree
+#: model:ir.ui.view,arch_db:hr.view_department_filter
+msgid "Departments"
+msgstr "Oficinas"
+
+
+#. module: hr
+#: model:ir.model.fields,field_description:hr.field_hr_employee_job_id
+#: model:ir.model.fields,field_description:hr.field_hr_job_name
+msgid "Job Title"
+msgstr "Puesto"
+
+#. module: hr
+#: model:ir.model.fields,field_description:hr.field_hr_department_child_ids
+msgid "Child Departments"
+msgstr "Oficinas hijas"
+
+
+#. module: hr
+#: code:addons/hr/models/hr.py:254
+#, python-format
+msgid "Error! You cannot create recursive departments."
+msgstr "¡Error! No puede crear oficinas recursivas."
+
+#. module: hr
+#: model:ir.model.fields,field_description:hr.field_hr_department_name
+msgid "Department Name"
+msgstr "Nombre de Oficina"
+
+#. module: hr_contract
+#: model:ir.model.fields,field_description:hr_contract.field_hr_contract_name
+msgid "Contract Reference"
+msgstr "Referencia Contrato / Resolución"
+
+#. module: hr_contract
+#: model:ir.model.fields,field_description:hr_contract.field_hr_contract_employee_id
+msgid "Employee"
+msgstr "Servidor"
+
+#. module: hr_contract
+#: model:ir.model.fields,field_description:hr_contract.field_hr_contract_department_id
+msgid "Departament"
+msgstr "Oficina"

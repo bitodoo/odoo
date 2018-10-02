@@ -1,0 +1,4 @@
+id,parent_id/id,sequence,code,name,value_1,value_2,value_3
+_color,,,_color,Color,,,
+_rojo,_color,,_rojo,Rojo,,,
+_negro,_color,,_negro,Negro,,,
