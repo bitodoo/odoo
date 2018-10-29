@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="bo_pos_two_decimal_order_line_assets" inherit_id="point_of_sale.assets" name="point_of_sale assets">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/bo_pos_two_decimal_order_line/static/src/js/models.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>
