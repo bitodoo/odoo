@@ -35,5 +35,4 @@
         'static/src/xml/pos.xml'
     ],
     'application': True,
-    'auto_install': True
 }

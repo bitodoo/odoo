@@ -33,5 +33,4 @@
     ],
     'qweb': [],
     'application': True,
-    'auto_install': True
 }
