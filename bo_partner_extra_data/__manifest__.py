@@ -20,20 +20,18 @@
 ##############################################################################
 
 {
-    'name': 'Bitodoo pos partner extra data',
-    'summary': 'Bitodoo pos partner extra data',
-    'description': """Bitodoo pos partner extra data.""",
-    'category': 'Point Of Sale',
+    'name': 'Bitodoo partner extra data',
+    'summary': 'Bitodoo partner extra data',
+    'description': """Bitodoo partner extra data.""",
+    'category': 'Others',
     'version': '1.0',
     'website': 'http://www.bitodoo.com/',
     'author': 'Bitodoo',
-    'depends': ['point_of_sale', 'bo_partner_extra_data'],
+    'depends': ['base'],
     'data': [
-        'views/point_of_sale.xml',
+        'views/partner_views.xml',
     ],
-    'qweb': [
-        'static/src/xml/pos.xml'
-    ],
+    'qweb': [],
     'application': True,
     'auto_install': True
 }
