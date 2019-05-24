@@ -32,7 +32,7 @@ class Binary(http.Controller):
                 'data': "Not method"}
             return request.make_response(html_escape(json.dumps(error)))
 
-        data = getattr(Model.browse(id), method)()
+        data = getattr(Model.sudo().browse(id), method)()
 
         headers = [
             ('Content-Type', mimetype),

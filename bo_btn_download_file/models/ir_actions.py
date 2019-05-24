@@ -20,6 +20,8 @@ class IrActionsActUrl(models.Model):
         m = self.env[model]
         if not hasattr(m, method):
             raise UserError(_(u"Not found method"))
+        if not m.browse(id).sudo().exists():
+            raise UserError(_(u"Record not exists"))
         values = {
             'model': model,
             'method': method,

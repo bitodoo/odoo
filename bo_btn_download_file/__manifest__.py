@@ -8,10 +8,7 @@
     'website': 'https://bitodoo.com/',
     'author': 'Bitodoo',
     'depends': ['base'],
-    'data': [
-        # 'views/hr_views.xml',
-        # 'views/stock_views.xml',
-    ],
+    'data': [],
     'installable': True,
     'application': False,
 }
