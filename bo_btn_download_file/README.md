@@ -1,6 +1,6 @@
 # Example
 ## In view:
-```xml
+```html
    <button name="print_late_comming" class="oe_highlight" string="Late comming PDF" type="object"/>
    <button name="print_late_comming_xls" class="oe_highlight" string="Late comming XLS" type="object"/>
 ```
