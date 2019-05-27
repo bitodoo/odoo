@@ -1,2 +1,0 @@
-https://github.com/odoo/odoo/issues/2931#issuecomment-344910116
-http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#line-blocks
