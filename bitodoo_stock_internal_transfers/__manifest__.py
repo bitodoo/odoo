@@ -27,7 +27,7 @@
     'version': '1.0',
     'website': 'http://www.bitodoo.com/',
     'author': 'Bitodoo',
-    'depends': ['stock'],
+    'depends': ['stock', 'bitodoo_stock_assign_location_user'],
     'data': [
         'views/form.xml',
         'views/search.xml',
