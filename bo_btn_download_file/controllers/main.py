@@ -11,6 +11,7 @@ class Binary(http.Controller):
     @serialize_exception
     def download_binary_content(self, model, method, id, filename='download_file.xls',
                                 mimetype='application/octet-stream;charset=utf-8;', **kw):
+        id = int(id)
         if not model or not method or not id or not filename or not mimetype:
             error = {
                 'code': 200,
