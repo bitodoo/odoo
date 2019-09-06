@@ -20,14 +20,17 @@
 ##############################################################################
 
 {
-    'name': 'Transferencias Internas ajustes',
-    'summary': 'Transferencias Internas ajustes',
-    'description': """Transferencias Internas ajustes""",
-    'category': 'Stock',
-    'version': '1.0',
+    'name': 'Transferencias Internas',
+    'summary': 'Transferencias Internas',
+    'description': """Transferencias Internas""",
+    'category': 'stock',
+    'version': '1.1',
     'website': 'http://www.bitodoo.com/',
     'author': 'Bitodoo',
-    'depends': ['stock', 'bitodoo_stock_assign_location_user'],
+    'depends': [
+        'stock',
+        'bitodoo_stock_assign_location_user'
+    ],
     'data': [
         'views/form.xml',
         'views/search.xml',
