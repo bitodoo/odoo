@@ -70,23 +70,24 @@ class StockPicking(models.Model):
                     raise Warning(msm)
         return super(StockPicking, self).copy(default)
 
-    @api.model
-    def fields_view_get(self, view_id=None, view_type=False, toolbar=False, submenu=False):
-        res = super(StockPicking, self).fields_view_get(
-            view_id=view_id, view_type=view_type, toolbar=toolbar, submenu=submenu
-        )
-        if view_type == 'form':
-            doc = etree.XML(res['arch'])
-            for element in doc.iter():
-                if element.tag == 'field':
-                    modifiers = json.loads(element.get('modifiers'))
-                    modifiers.update({
-                        'readonly': [["can_validate", "=", True]]
-                    })
-                    modifiers = json.dumps(modifiers)
-                    element.set('modifiers', modifiers)
-            res['arch'] = etree.tostring(doc)
-        return res
+#validat..
+    # @api.model
+    # def fields_view_get(self, view_id=None, view_type=False, toolbar=False, submenu=False):
+    #     res = super(StockPicking, self).fields_view_get(
+    #         view_id=view_id, view_type=view_type, toolbar=toolbar, submenu=submenu
+    #     )
+    #     if view_type == 'form':
+    #         doc = etree.XML(res['arch'])
+    #         for element in doc.iter():
+    #             if element.tag == 'field':
+    #                 modifiers = json.loads(element.get('modifiers'))
+    #                 modifiers.update({
+    #                     'readonly': [["can_validate", "=", True]]
+    #                 })
+    #                 modifiers = json.dumps(modifiers)
+    #                 element.set('modifiers', modifiers)
+    #         res['arch'] = etree.tostring(doc)
+    #     return res
 
     @api.multi
     @api.depends('state', 'is_locked')
