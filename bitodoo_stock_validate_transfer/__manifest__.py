@@ -20,18 +20,16 @@
 ##############################################################################
 
 {
-    'name': u'valida transferencias de ubicación destino y origen',
-    'summary': """Valida transferencias si la ubicación destino y origen es igual las lineas del stock move y
-                agrega ubicación destino, ubicación Origen.""",
-    'description': """Valida transferencias si la ubicación destino y origen es igual las
-                    lineas del stock move y agrega ubicación destino, ubicación Origen.""",
+    'name': u'Transfers',
+    'summary': """Transfer valid.""",
+    'description': """Transfer valid.""",
     'category': 'Stock',
     'version': '1.0',
     'website': 'http://www.bitodoo.com/',
     'author': 'Bitodoo',
     'depends': ['stock'],
     'data': [
-        'views/stock.xml',
+        # 'views/stock.xml',
     ],
     'application': True,
 }
