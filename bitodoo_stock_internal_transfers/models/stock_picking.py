@@ -45,6 +45,14 @@ class StockPicking(models.Model):
         for rec in self:
             rec.state = 'assigned'
     
+
+    @api.one
+    def action_cancel(self):
+        r = super(StockPicking, self).action_cancel()
+        if self.condition_delivery:
+            self.state = "cancel"
+        return r
+    
     @api.multi
     def button_validate(self):
         res = super(StockPicking, self).button_validate()
