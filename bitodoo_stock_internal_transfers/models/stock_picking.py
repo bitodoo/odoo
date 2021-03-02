@@ -52,7 +52,7 @@ class StockPicking(models.Model):
         if self.condition_delivery:
             self.state = "cancel"
         return r
-"""     
+
     @api.multi
     def button_validate(self):
         res = super(StockPicking, self).button_validate()
@@ -89,4 +89,4 @@ class StockPicking(models.Model):
                         messaje = u"Usted planea transferir {} {} pero solo tiene {} en {} ".format(product_qty, product_name, product_stock_qty, name_warehouse)
                         raise Warning(messaje)
 
-        return res """
+        return res
